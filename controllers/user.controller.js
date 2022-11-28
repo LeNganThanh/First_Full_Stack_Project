@@ -42,7 +42,7 @@ export const getPostUser = async (req, res, next) => {
     const newUser = new UserCollection(req.body);
     //set image
     if (req.file) {
-      newUser.profileImage = `http://localhost:4000/${req.file.filename}`;
+      newUser.profileImage = `/${req.file.filename}`;
     }
     await newUser.save();
     //console.log(newUser.fullName);
@@ -60,7 +60,7 @@ export const getUpdateUser = async (req, res, next) => {
     let user = await UserCollection.findById(req.params.id);
     //update user with image
     if (req.file) {
-      user.profileImage = `http://localhost:4000/${req.file.filename}`;
+      user.profileImage = `/${req.file.filename}`;
     }
 
     if (req.body.password) {
