@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import bcrypt from "bcrypt";
+//import bcrypt from "bcrypt";
 //import {Schema, model} from "mongoose"; //destructure directly
 
 const Schema = mongoose.Schema;

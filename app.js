@@ -1,13 +1,10 @@
 import express from "express";
-import morgan from "morgan";
 import mongoose from "mongoose";
-import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config(); //initial dotenv to make it work
 
 import cookie from "cookie-parser"; //use to read token from cookies
 
-import multer from "multer"; //using multer to add images
 
 //by import can use any suitable name for the router
 import userRouter from "./routes/user.routes.js";
@@ -75,7 +72,7 @@ app.use("/", (req, res, next) => {
   next();
 }); */
 //using morgan similar like comment above just to shows the status of command execute
-app.use(morgan("dev")); //tiny ~ dev
+//app.use(morgan("dev")); //tiny ~ dev
 /* 
 - app.use(express.json())-->> this is external middleware - a function get call
 - app.use(middleware); -->> customer middle ware - function call direct
